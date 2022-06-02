@@ -1,28 +1,15 @@
+<script setup>
+import HeaderComp from "@/components/template/HeaderComp.vue";
+import FooterComp from "@/components/template/FooterComp.vue";
+</script>
 <template>
-  <header class="menu-superior">
-    <div class="menu-esquerdo">
-      <span> Home </span>
-      <span> | </span>
-      <span> Times </span>
-      <span> | </span>
-      <span> Jogadores </span>
-    </div>
-    <div class="menu-direito">
-      <span> Sair </span>
-    </div>
-  </header>
-
+  <HeaderComp />
   <RouterView />
+  <FooterComp />
 </template>
 
 <style>
 @import "@/assets/base.css";
-
-header.menu-superior {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
 
 #app {
   max-width: 1280px;
@@ -44,25 +31,6 @@ h1:hover {
   transform: matrix(1000, 70, 60, 50, 40, 30);
   color: black;
 } */
-
-header,
-footer {
-  background-color: crimson;
-  color: white;
-  height: 15%;
-  font-size: 1.3rem;
-  display: flex;
-  align-items: center;
-  padding-left: 2rem;
-}
-
-header span {
-  padding: 0% 20px;
-}
-
-.balls {
-  transform: perspective(1 3 5 7);
-}
 
 main {
   height: 70%;
