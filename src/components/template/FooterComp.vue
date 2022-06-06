@@ -18,6 +18,7 @@ footer img {
   max-height: 90%;
   width: auto;
   filter: blur(5px);
+  transition: 0.1s;
 }
 
 footer img:hover {
