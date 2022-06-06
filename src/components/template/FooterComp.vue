@@ -16,7 +16,7 @@ footer {
 
 footer img {
   max-height: 90%;
-  width: 50%;
+  width: auto;
   filter: blur(5px);
 }
 
