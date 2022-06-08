@@ -22,7 +22,6 @@ export default {
       <button>Salvar</button>
     </div>
     <div class="list-items">
-      {{ times }}
       <table>
         <thead>
           <tr>
@@ -32,19 +31,9 @@ export default {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th>1</th>
-            <th>Comunismo</th>
-            <th>☭</th>
-          </tr>
-          <tr>
-            <th>2</th>
-            <th>Capitalismo</th>
-            <th>$</th>
-          </tr>
-          <tr>
-            <th>3</th>
-            <th>Olavo de Carvalho</th>
+          <tr v-for="time in times" :key="time.id">
+            <th>{{ time.id }}</th>
+            <th>{{ time.name }}</th>
             <th>☠</th>
           </tr>
         </tbody>

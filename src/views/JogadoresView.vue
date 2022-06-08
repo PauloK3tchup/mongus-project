@@ -1,3 +1,18 @@
+<script>
+export default {
+  data() {
+    return {
+      jogadores: [
+        { id: 1, name: "Jogador 1", n_camisa: 1, time: 1 },
+        { id: 2, name: "Jogador 2", n_camisa: 2, time: 2 },
+        { id: 3, name: "Jogador 3", n_camisa: 3, time: 3 },
+        { id: 4, name: "Jogador 4", n_camisa: 4, time: 4 },
+      ],
+    };
+  },
+};
+</script>
+
 <template>
   <main>
     <div class="container">
@@ -21,25 +36,11 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th>1</th>
-              <th>Neymar Sr.</th>
-              <th>69</th>
-              <th>Cockrinthians</th>
-              <th>Bah</th>
-            </tr>
-            <tr>
-              <th>2</th>
-              <th>Rolandinho Carioca</th>
-              <th>420</th>
-              <th>Palmeiras</th>
-              <th>Bah</th>
-            </tr>
-            <tr>
-              <th>3</th>
-              <th>Cristaldo Ronano</th>
-              <th>2</th>
-              <th>Farmengro</th>
+            <tr v-for="jogador in jogadores" :key="jogador.id">
+              <th>{{ jogador.id }}</th>
+              <th>{{ jogador.name }}</th>
+              <th>{{ jogador.n_camisa }}</th>
+              <th>{{ jogador.time }}</th>
               <th>Bah</th>
             </tr>
           </tbody>
