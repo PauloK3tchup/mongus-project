@@ -10,7 +10,9 @@
       </span>
     </div>
     <div class="menu-direito">
-      <span> Sair </span>
+      <span>
+        <RouterLink to="/" class="botão"> Sair </RouterLink>
+      </span>
     </div>
   </header>
 </template>
