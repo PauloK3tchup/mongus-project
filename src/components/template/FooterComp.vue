@@ -1,9 +1,10 @@
 <template>
   <footer>
     <img src="https://c.tenor.com/tlr4TFGfSL0AAAAC/bobux.gif" alt="" />
+    <p class="uau">Site feito por: teu pai e tua mãekkkkkkkk</p>
   </footer>
 </template>
-<style>
+<style scoped>
 footer {
   background-color: crimson;
   color: white;
@@ -23,5 +24,15 @@ footer img {
 
 footer img:hover {
   filter: blur(0px);
+}
+
+footer p.uau {
+  margin-left: 50px;
+  transition: 0.25s;
+}
+
+footer p.uau:hover {
+  transform: scale(2) rotate(360deg);
+  color: black;
 }
 </style>
