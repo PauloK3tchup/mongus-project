@@ -3,6 +3,7 @@ import { v4 as uuid } from "uuid";
 export default {
   data() {
     return {
+      novo_time: "",
       times: [
         { id: "313526bc-ffc9-444a-b77a-334bc7e5b7de", name: "Time 1" },
         { id: "45f3d289-e236-487b-b1ed-a807855492a0", name: "Time 2" },
@@ -13,8 +14,11 @@ export default {
   },
   methods: {
     salvar() {
-      const id = uuid();
-      alert(id);
+      const novo_id = uuid();
+      this.times.push({
+        id: novo_id,
+        name: this.novo_time,
+      });
     },
   },
 };
@@ -25,7 +29,12 @@ export default {
       <h2>Gerenciamento de times</h2>
     </div>
     <div class="form-input">
-      <input type="text" name="" id="" placeholder="Nome do time" />
+      <input
+        type="text"
+        placeholder="Nome do time"
+        id="nome_time"
+        v-model="novo_time"
+      />
       <button @click="salvar">Salvar</button>
     </div>
     <div class="list-items">
@@ -41,7 +50,7 @@ export default {
           <tr v-for="time in times" :key="time.id">
             <th>{{ time.id }}</th>
             <th>{{ time.name }}</th>
-            <th>☠</th>
+            <th><button>☠</button></th>
           </tr>
         </tbody>
       </table>
