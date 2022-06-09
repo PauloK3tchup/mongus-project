@@ -95,6 +95,7 @@ export default {
                   <option value="">Zagueiro</option>
                   <option value="">Goleiro</option>
                   <option value="">Atacante</option>
+                  <option value="">Teu Pai</option>
                 </select>
               </th>
               <th><button>☠</button></th>
