@@ -14,11 +14,20 @@ export default {
   },
   methods: {
     salvar() {
-      const novo_id = uuid();
-      this.times.push({
-        id: novo_id,
-        name: this.novo_time,
-      });
+      if (this.novo_time !== "") {
+        const novo_id = uuid();
+        this.times.push({
+          id: novo_id,
+          name: this.novo_time,
+        });
+        this.novo_time = "";
+      } else {
+        alert("cu");
+      }
+    },
+    excluir(time) {
+      const indice = this.times.indexOf(time);
+      alert(indice);
     },
   },
 };
@@ -50,7 +59,10 @@ export default {
           <tr v-for="time in times" :key="time.id">
             <th>{{ time.id }}</th>
             <th>{{ time.name }}</th>
-            <th><button>☠</button></th>
+            <th>
+              <button>✎</button>
+              <button @click="excluir(time)">☠</button>
+            </th>
           </tr>
         </tbody>
       </table>
@@ -60,7 +72,7 @@ export default {
     <img
       class="bobux"
       src="https://www.einerd.com.br/wp-content/uploads/2019/06/Walter-White-morreu-Breaking-Bad-capa.jpg"
-      alt=""
+      alt="er white"
     />
   </div>
 </template>

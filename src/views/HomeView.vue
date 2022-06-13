@@ -7,7 +7,14 @@
       <img
         src="https://c.tenor.com/0lbyPcn3-FgAAAAC/engineer-tf2.gif"
         alt="Engineer mandando AQUELE"
+        class="engie"
       />
     </div>
   </main>
 </template>
+<style scoped>
+img.engie {
+  width: 300px;
+  height: auto;
+}
+</style>
