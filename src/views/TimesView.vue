@@ -27,7 +27,7 @@ export default {
     },
     excluir(time) {
       const indice = this.times.indexOf(time);
-      alert(indice);
+      this.times.splice(indice, 1);
     },
   },
 };
@@ -43,6 +43,7 @@ export default {
         placeholder="Nome do time"
         id="nome_time"
         v-model="novo_time"
+        @keypress.enter="salvar"
       />
       <button @click="salvar">Salvar</button>
     </div>
